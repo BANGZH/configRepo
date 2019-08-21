@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jpademo?useunicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    # password: '{cipher}5ca30eef8d4698fcbaf0fe42fba55ae6c56ad342ec55a0b0ec275bca7580dafe'
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    dbcp2:
+      max-idle: 10
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
